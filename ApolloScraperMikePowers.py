@@ -21,15 +21,15 @@ import time
 # And then enjoy :)
 
 chrome_options = Options()
-user_data_dir = r'C:\Users\  (enter in your user here)  \AppData\Local\Google\Chrome\User Data\Default'
+user_data_dir = r'/Users/nayrit/Library/Application Support/Google/Chrome/Default'
 chrome_options.add_argument(f"user-data-dir={user_data_dir}")
 chrome_driver_path = './chromedriver.exe'
 service = Service(chrome_driver_path)
 driver = webdriver.Chrome(service=service, options=chrome_options)
 
 # Link and name of CSV
-driver.get("(your apollo.io link goes here in between the "")")
-csv_file_name = 'RealEstate.csv'
+driver.get("https://app.apollo.io/?utm_campaign=Transactional%3A+Account+Activation&utm_medium=email&utm_source=cio#/people?page=1&tour=true&sortAscending=false&personTitles[]=owner&personTitles[]=c%2520suit&personTitles[]=product%2520manager&personTitles[]=merchandiser%2520manager&contactEmailStatusV2[]=likely_to_engage&contactEmailStatusV2[]=verified&organizationIndustryTagIds[]=5567cd82736964540d0b0000")
+csv_file_name = 'apollo-contacts-export.csv'
 
 time.sleep(2)
 
